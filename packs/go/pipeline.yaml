@@ -19,7 +19,7 @@ pipelines:
           name: make-preview
         - sh: jx preview --app $APP_NAME --dir ../..
           name: jx-preview
-        - sh: echo "I am a test"
+        - sh: helm test $APP_NAME
           name: test-step
 
   release:
